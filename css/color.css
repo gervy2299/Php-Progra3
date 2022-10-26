@@ -1,0 +1,23 @@
+:root{
+ --color1: #000000;
+ --color2: #c1b622;
+}
+
+
+.btn_ampere{
+    background: var(--color1);
+    border: 1px solid var(--color1);
+}
+
+.ampere_bk{
+    background: var(--color1)!important;
+}
+
+.ampere_clr{
+    color: var(--color2);
+}
+
+.btn_ampere:hover{
+    background: var(--color2);
+    border: 1px solid var(--color2);
+}
