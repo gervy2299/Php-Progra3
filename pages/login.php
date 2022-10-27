@@ -92,7 +92,7 @@ include_once './conexion.php';
     class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary ampere_bk footer_login">
     <!-- Copyright -->
     <div class="text-white mb-3 mb-md-0">
-      Copyright © 2020. Grupo 4 - Programación 3.
+      Copyright © 2022. Grupo 4 - Programación 3.
     </div>
     <!-- Copyright -->
 
