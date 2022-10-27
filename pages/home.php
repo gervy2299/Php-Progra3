@@ -17,7 +17,12 @@
 </head>
 
 <body>
-        <?php $obj->Menus($_SESSION['usuario']);?>
+        <?php 
+        // $sql2 = 'select concat(per.nom_persona," ",per.primer_apellido) as empleado from empleados em inner join personas per on em.DNI=per.DNI where em.idempleado="'.$_SESSION['usuario'].'"';
+        // $res_sql2 = $obj->conectar()->query($sql2);
+        // $arr = mysqli_fetch_array($res_sql2);    
+        $obj->Menus($_SESSION['usuario']);
+        ?>
 
 <!--Main layout-->
 <main style="margin-top: 7vh">

@@ -40,6 +40,12 @@
    }
 
    public function Menus($usu){
+
+        $cons = new ConexionBD;
+        $sql2 = 'select concat(per.nom_persona," ",per.primer_apellido) as empleado from empleados em inner join personas per on em.DNI=per.DNI where em.idempleado="'.$usu.'"';
+        $res_sql2 = $cons->conectar()->query($sql2);
+        $arr = mysqli_fetch_array($res_sql2);
+
     echo'
     <!--Main Navigation-->
 <header>
@@ -53,7 +59,7 @@
         <a href="#"
            class="list-group-item list-group-item-action py-2 ripple active">
            <i class="fa-solid fa-user-astronaut">
-            <span>'.$usu.'</span>
+            <span>'.$arr[0].'</span>
            </i>
         </a>
         <a
