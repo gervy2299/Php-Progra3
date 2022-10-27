@@ -1,20 +1,12 @@
 <?php
  session_start();session_destroy();
+ require'./conexion.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- BOOTSTRAP -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <!-- CSS -->
-  <link rel="stylesheet" href="../style.css">
-  <title>Document</title>
-</head>
+<head> <?php $obj=new ConexionBD(); $obj->Header();?> </head>
 
 <body>
   <section class="vh-100">
@@ -46,14 +38,14 @@
 
             <!-- Email input -->
             <div class="form-outline mb-4">
-              <input type="text" id="form3Example3" class="form-control form-control-lg" placeholder="Enter a valid email address" />
-              <label class="form-label" for="form3Example3" name="usuario">Email address</label>
+              <input type="text" id="form3Example3" class="form-control form-control-lg" placeholder="Enter a valid email address" name="usuario" />
+              <label class="form-label" for="form3Example3">Email address</label>
             </div>
 
             <!-- Password input -->
             <div class="form-outline mb-3">
-              <input type="password" id="form3Example4" class="form-control form-control-lg" placeholder="Enter password" />
-              <label class="form-label" for="form3Example4" name="pass">Password</label>
+              <input type="password" id="form3Example4" class="form-control form-control-lg" placeholder="Enter password" name="pass" />
+              <label class="form-label" for="form3Example4">Password</label>
             </div>
 
             <div class="d-flex justify-content-between align-items-center">
@@ -102,9 +94,6 @@
       </div>
       <!-- Right -->
 
-
-      <!-- LINK FONTAWESOME -->
-      <script src="https://kit.fontawesome.com/c997deb1aa.js" crossorigin="anonymous"></script>
     </div>
   </section>
 </body>
