@@ -52,25 +52,16 @@
   <thead>
     <tr>
       <th scope="col">N°</th>
-      <th scope="col">DNI</th>
-      <th scope="col">PERSONAS</th>
-      <th scope="col">RUC</th>
-      <th scope="col">EMPRESA</th>
-      <th scope="col">DIRECCION</th>
+      <th scope="col">PRODUCTO</th>
+      <th scope="col">PRECIO</th>
+      <th scope="col">MARCA</th>
+      <th scope="col">CARACTERISTICA</th>
       <th scope="col">ACCIONES</th>
     </tr>
   </thead>
   <tbody>
     <?php 
-    $sql= 'select
-    per.DNI as DNI, 
-    concat(per.nom_persona," ", per.primer_apellido," ",per.segundo_apellido) as persona,
-    em.RUC as RUC,
-    em.raz_social as empresa,
-    em.direc as direccion
-    from proveedor pro
-    inner join personas per on pro.DNI=per.DNI
-    inner join empresa em on pro.RUC=em.RUC;';
+    $sql= 'select p.nom_prod,p.precio,m.nom_marca,p.caract from productos p inner join marcas m on p.idmarca=m.idmarca order by p.nom_prod;';
     $item=0;
             
     foreach ($obj->conectar()->query($sql) as $row) {
@@ -78,11 +69,10 @@
         echo '
                 <tr>
                     <th scope="row">'.$item.'</th>
-                    <td>'.$row["DNI"].'</td>
-                    <td>'.$row["persona"].'</td>
-                    <td>'.$row["RUC"].'</td>
-                    <td>'.$row["empresa"].'</td>
-                    <td>'.$row["direccion"].'</td>
+                    <td>'.$row["nom_prod"].'</td>
+                    <td>'.$row["precio"].'</td>
+                    <td>'.$row["nom_marca"].'</td>
+                    <td>'.$row["caract"].'</td>
                     <td><i class="fa-solid fa-pen" style="margin-right: 20px;"></i><i class="fa-solid fa-trash"></i></td>
                 </tr> '; 
     }
