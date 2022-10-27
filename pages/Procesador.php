@@ -7,7 +7,7 @@
  switch($_POST["btaccede"]){
   case"aceptar":{
     $cnx=new ConexionBD();
-    $sql = "select true";
+    // $sql = "select true";
     $sql="select * from empleados where idempleado='".$_POST["usuario"]."' and DNI='".$_POST["pass"]."'";
     $resultado = $cnx->conectar()->query($sql);
     if ($resultado->num_rows==1) {
