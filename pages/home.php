@@ -24,23 +24,31 @@
   <div class="container pt-4">
   <form>
   <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <label for="inputEmail3" class="col-sm-2 col-form-label">DNI</label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="DNI">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <label for="inputPassword3" class="col-sm-2 col-form-label">NOMBRE</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Nombre">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <label for="inputPassword3" class="col-sm-2 col-form-label">APELLIDO PATERNO</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Apellido Paterno">
     </div>
   </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">APELLIDO MATERNO</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Apellido Materno">
+    </div>
+  </div>
+
+
   <div class="form-group row">
     <div class="col-sm-10">
       <button type="submit" class="btn btn-primary">Agregar</button>
@@ -48,6 +56,8 @@
   </div>
 </form>
   </div>
+
+  <!-- TABLA -->
   <div class="container pt-4" >
   <table class="table table-striped table-dark">
   <thead>

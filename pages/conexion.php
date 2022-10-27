@@ -189,6 +189,7 @@
                  height="22"
                  alt=""
                  loading="lazy"
+                 style="margin-left: 8px;"
                  />
           </a>
         </li>
