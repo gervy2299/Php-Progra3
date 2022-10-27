@@ -40,118 +40,166 @@
 
    public function Menus($usu){
     echo'
-    <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="dist/img/unasam.png" alt="UnasamLogo" height="60" width="60">
-    </div>
-    <aside class="main-sidebar sidebar-dark-primary elevation-4 bg-danger">
-    <a href="/" class="brand-link"><img src="dist/img/unasam.png" alt="UNASAM Logo" 
-    class="brand-image img-circle elevation-3" style="opacity: .8">
-    <span class="brand-text font-weight-bold text-warning">SIGCONDIE</span>
-    </a>
-    <div class="sidebar">
-     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-      <div class="image">
-       <img src="dist/img/avatar4.png" class="img-circle elevation-2" alt="User Image">
+    <!--Main Navigation-->
+<header>
+  <!-- Sidebar -->
+  <nav
+       id="sidebarMenu"
+       class="collapse d-lg-block sidebar collapse bg-white"
+       >
+    <div class="position-sticky">
+      <div class="list-group list-group-flush mx-3 mt-4">
+        <a href="#"
+           class="list-group-item list-group-item-action py-2 ripple active">
+           <i class="fa-solid fa-user-astronaut">
+            <span>'.$usu.'</span>
+           </i>
+        </a>
+        <a
+           href="#"
+           class="list-group-item list-group-item-action py-2 ripple"
+           aria-current="true"
+           >
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i
+            ><span>Main dashboard</span>
+        </a>
+        <a
+           href="#"
+           class="list-group-item list-group-item-action py-2 ripple "
+           >
+          <i class="fas fa-chart-area fa-fw me-3"></i
+            ><span>Webiste traffic</span>
+        </a>
+        <a
+           href="#"
+           class="list-group-item list-group-item-action py-2 ripple"
+           ><i class="fas fa-lock fa-fw me-3"></i><span>Password</span></a
+          >
+        <a
+           href="#"
+           class="list-group-item list-group-item-action py-2 ripple"
+           ><i class="fas fa-chart-line fa-fw me-3"></i
+          ><span>Analytics</span></a
+          >
+        <a
+           href="#"
+           class="list-group-item list-group-item-action py-2 ripple"
+           >
+          <i class="fas fa-chart-pie fa-fw me-3"></i><span>SEO</span>
+        </a>
+        <a
+           href="#"
+           class="list-group-item list-group-item-action py-2 ripple"
+           ><i class="fas fa-chart-bar fa-fw me-3"></i><span>Orders</span></a
+          >
+        <a
+           href="#"
+           class="list-group-item list-group-item-action py-2 ripple"
+           ><i class="fas fa-globe fa-fw me-3"></i
+          ><span>International</span></a
+          >
+        <a
+           href="#"
+           class="list-group-item list-group-item-action py-2 ripple"
+           ><i class="fas fa-building fa-fw me-3"></i
+          ><span>Partners</span></a
+          >
+        <a
+           href="#"
+           class="list-group-item list-group-item-action py-2 ripple"
+           ><i class="fas fa-calendar fa-fw me-3"></i
+          ><span>Calendar</span></a
+          >
+        <a
+           href="#"
+           class="list-group-item list-group-item-action py-2 ripple"
+           ><i class="fas fa-users fa-fw me-3"></i><span>Users</span></a
+          >
+        <a
+           href="#"
+           class="list-group-item list-group-item-action py-2 ripple"
+           ><i class="fas fa-money-bill fa-fw me-3"></i><span>Sales</span></a
+          >
       </div>
-     <div class="info"><a href="#" class="d-block">'.$usu.'</a>
-    </div></div>
-    <nav class="mt-2">
-     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" 
-     role="menu" data-accordion="false">
-      <li class="nav-item menu-open">
-        <a href="#" class="nav-link active">
-          <i class="nav-icon fas fa-duotone fa-camera-retro bg-warning"></i>
-          <p>Tablas<i class="right fas fa-angle-left"></i></p>
-        </a>
-        <ul class="nav nav-treeview">
-          <li class="nav-item">
-            <a href="./Facultades.php" class="nav-link active">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Facultades</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="./Facultades.php" class="nav-link">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Escuelas</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="./Facultades.php" class="nav-link">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Tipo proyecto</p>
-            </a>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item menu-open">
-        <a href="#" class="nav-link active">
-          <i class="nav-icon fas fa fa-bars bg-warning"></i>
-          <p>
-            Procesos
-            <i class="right fas fa-angle-left"></i>
-          </p>
-        </a>
-        <ul class="nav nav-treeview">
-          <li class="nav-item">
-            <a href="./Facultades.php" class="nav-link active">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Registro de Estudiantes</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="./Facultades.php" class="nav-link">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Registro de docentes</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="./Facultades.php" class="nav-link">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Registro del plan curricular</p>
-            </a>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item menu-open">
-        <a href="#" class="nav-link active">
-          <i class="nav-icon fas fa fa-bars bg-warning"></i>
-          <p>Reportes<i class="right fas fa-angle-left"></i></p>
-        </a>
-        <ul class="nav nav-treeview">
-          <li class="nav-item">
-              <a href="./Facultades.php" target="_blank" class="nav-link active">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Facultades</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="./Facultades.php" class="nav-link">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Escuelas</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="./EscuelasxFacultad.php" class="nav-link">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Escuelas por Facultad</p>
-            </a>
-          </li>
-        </ul>
-      </li>          
-    </ul>
+    </div>
   </nav>
- </div>
- </aside>';
-   }
+  <!-- Sidebar -->
 
-   public function Fondo(){
-    echo'<div class="content-wrapper bg-white"><section class="content">
-     <div class="container-fluid"><div class="row">
-     <div class="col-md-12" style="background-color: #eFF5EE">
-     <img src="dist/img/logo.png" class="img-fluid"></div>
-     </div></div></section></div>';
-    }
+  <!-- Navbar -->
+  <nav
+       id="main-navbar"
+       class="navbar navbar-expand-lg navbar-light bg-white fixed-top"
+       >
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button
+              class="navbar-toggler"
+              type="button"
+              data-mdb-toggle="collapse"
+              data-mdb-target="#sidebarMenu"
+              aria-controls="sidebarMenu"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              >
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="#">
+        <img
+             src="../img/logo.png"
+             height="25"
+             alt=""
+             loading="lazy"
+             />
+             <label>Ampere Electrónica</label>
+      </a>
+      <!-- Search form -->
+      <form class="d-none d-md-flex input-group w-auto my-auto">
+        <input
+               autocomplete="off"
+               type="search"
+               class="form-control rounded"
+               placeholder="Search (ctrl + "/" to focus)"
+               style="min-width: 225px"
+               />
+        <span class="input-group-text border-0"
+              ><i class="fas fa-search"></i
+          ></span>
+      </form>
+
+      <!-- Right links -->
+      <ul class="navbar-nav ms-auto d-flex flex-row">
+
+        <!-- Avatar -->
+        <li class="nav-item dropdown">
+          <a
+             class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center"
+             href="./salir.php"
+             id="navbarDropdownMenuLink"
+             role="button"
+             data-mdb-toggle="dropdown"
+             aria-expanded="false"
+             >
+             Logout  
+            <img
+                 src="../img/logo.png"
+                 class="rounded-circle"
+                 height="22"
+                 alt=""
+                 loading="lazy"
+                 />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+</header>
+<!--Main Navigation-->';
+   }
 
   }
 

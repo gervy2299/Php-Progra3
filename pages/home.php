@@ -11,16 +11,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head> <?php $obj->header(); ?> </head>
+<head>
+     <?php $obj->header(); ?> 
+     <script src="./js/home.js"></script>
+</head>
 
 <body>
-    <div class="wrapper">
-        <!-- Content Wrapper. Contains page content -->
         <?php $obj->Menus($_SESSION['usuario']);
         echo '<a href="./salir.php" class="nav-link">salir';
-        
-        $obj->Fondo(); ?>
-    </div>
+        ?>
+
+<!--Main layout-->
+<main style="margin-top: 7vh">
+  <div class="container pt-4">
+
+  </div>
+</main>
+<!--Main layout-->
+
     
 </body>
 
