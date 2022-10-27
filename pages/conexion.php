@@ -1,37 +1,26 @@
 <?php
-$host="localhost";
-$bd= "pr3_proyecto";
-$user = "root";
-$pass = "";
 
-$conn = mysqli_connect($host,$user,$pass);
-
-$bd = mysqli_select_db( $conn, $bd );
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+  class ConexionBD{
+    private $psw;
+   private $usr;
+   private $host;
+   private $port;
+   private $bd;
+   private $conec;   
+   public function __construct(){
+    $this->host="localhost";
+    $this->usr="root";
+    $this->psw="";
+    $this->bd="pr3_proyecto";
+   }
+   public function conectar(){
+       $this->conec=new mysqli($this->host,$this->usr,$this->psw,$this->bd);
+       if($this->conec->connect_error){
+        die("No se logro la conexion: ".$this->conec->connect_error);
+       }else{
+        return $this->conec;
+       }
+   }
   }
-//   echo "Connected successfully";
-
-//   $consulta = "SELECT * from empleados";
-// 	$resultado = mysqli_query( $conn, $consulta );
-
-
-//     echo "<table borde='2'>";
-// 	echo "<tr>";
-// 	echo "<th>Nombre</th>";
-// 	echo "<th>Edad</th>";
-// 	echo "</tr>";
-	
-// 	// Bucle while que recorre cada registro y muestra cada campo en la tabla.
-// 	while ($columna = mysqli_fetch_array( $resultado ))
-// 	{
-// 		echo "<tr>";
-// 		echo "<td>" . $columna['DNI'] . "</td><td>" . $columna['idempleado'] . "</td>";
-// 		echo "</tr>";
-// 	}
-	
-// 	echo "</table>"; // Fin de la tabla
-
 
 ?>
