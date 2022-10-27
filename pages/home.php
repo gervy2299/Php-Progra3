@@ -16,7 +16,10 @@
 <body>
     <div class="wrapper">
         <!-- Content Wrapper. Contains page content -->
-        <?php $obj->Menus($_SESSION['usuario']);$obj->Fondo(); ?>
+        <?php $obj->Menus($_SESSION['usuario']);
+        echo '<a href="./salir.php" class="nav-link">salir';
+        
+        $obj->Fondo(); ?>
     </div>
     
 </body>
