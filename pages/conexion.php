@@ -10,8 +10,8 @@
    public function __construct(){
     $this->host="localhost";
     $this->usr="root";
-    $this->psw="";
-    $this->bd="pr3_proyecto";
+    $this->psw="9905";
+    $this->bd="progra3";
    }
    public function conectar(){
        $this->conec=new mysqli($this->host,$this->usr,$this->psw,$this->bd);
