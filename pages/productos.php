@@ -13,7 +13,6 @@
 
 <head>
      <?php $obj->header(); ?> 
-     <script src="./js/home.js"></script>
 </head>
 
 <body>
