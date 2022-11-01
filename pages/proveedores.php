@@ -21,7 +21,7 @@
 <!--Main layout-->
 <main style="margin-top: 7vh">
   <div class="container pt-4">
-  <form action="./iud_proveedores.php" method="post"></form>
+  <form action="./iud_proveedores.php" method="post" enctype="multipart/form-data">
   <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label">DNI</label>
     <div class="col-sm-10">
