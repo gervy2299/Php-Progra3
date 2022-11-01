@@ -21,34 +21,58 @@
 <!--Main layout-->
 <main style="margin-top: 7vh">
   <div class="container pt-4">
-  <form>
+  <form action="./iud_proveedores.php" method="post"></form>
   <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <label for="inputEmail3" class="col-sm-2 col-form-label">DNI</label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      <input type="text" class="form-control" id="inputEmail3" name="dni" placeholder="DNI">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <label for="inputEmail3" class="col-sm-2 col-form-label">NOMBRES</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+      <input type="text" class="form-control" id="inputEmail3" name="nombres" placeholder="NOMBRES">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <label for="inputEmail3" class="col-sm-2 col-form-label">APELLIDO PATERNO</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+      <input type="text" class="form-control" id="inputEmail3" name="apepat" placeholder="APELLIDO PATERNO">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">APELLIDO MATERNO</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputEmail3" name="apemat" placeholder="APELLIDO MATERNO">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">RUC</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputEmail3" name="ruc" placeholder="RUC">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">NOMBRE DE LA EMPRESA</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputEmail3" name="nomemp" placeholder="NOMBRE DE LA EMPRESA">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">DIRECCION DE LA EMPRESA</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputEmail3" name="diremp" placeholder="NOMBRE DE LA EMPRESA">
     </div>
   </div>
   <div class="form-group row">
     <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Agregar</button>
+      <button type="submit" class="btn btn-primary">Insertar</button>
     </div>
   </div>
 </form>
   </div>
   <div class="container pt-4" >
-  <table class="table table-striped table-dark">
+  <table class="table table-striped table">
   <thead>
     <tr>
       <th scope="col">N°</th>

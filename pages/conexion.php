@@ -86,7 +86,7 @@
            href="#"
            class="list-group-item list-group-item-action py-2 ripple"
            ><i class="fas fa-chart-line fa-fw me-3"></i
-          ><span>Analytics</span></a
+          ><span>Información</span></a
           >
         <a
            href="#"
@@ -135,7 +135,8 @@
   <!-- Navbar -->
   <nav
        id="main-navbar"
-       class="navbar navbar-expand-lg navbar-light bg-white fixed-top"
+       class="navbar navbar-expand-lg navbar-light bg-white fixed-top sombra"
+       style="box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
        >
     <!-- Container wrapper -->
     <div class="container-fluid">
