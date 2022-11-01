@@ -13,7 +13,8 @@
     $insert = $obj->conectar()->query($sqlins);
 
     if (mysqli_query($obj->conectar(), $sqlins)) {
-        echo "New record created successfully";
+        // echo "New record created successfully";
+        header('location:./proveedores.php');
     }else {
         echo "Error: " . $sqlins . "<br>" . mysqli_error($conn);
     }

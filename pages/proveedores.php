@@ -22,10 +22,11 @@
 <main style="margin-top: 7vh">
   <div class="container pt-4">
   <form action="./iud_proveedores.php" method="post" enctype="multipart/form-data">
+  <!-- <form method="post" enctype="multipart/form-data"> -->
   <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label">DNI</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputEmail3" name="dni" placeholder="DNI">
+      <input type="number" class="form-control" id="inputEmail3" name="dni" placeholder="DNI">
     </div>
   </div>
   <div class="form-group row">
@@ -49,7 +50,7 @@
   <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label">RUC</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputEmail3" name="ruc" placeholder="RUC">
+      <input type="number" class="form-control" id="inputEmail3" name="ruc" placeholder="RUC">
     </div>
   </div>
   <div class="form-group row">
@@ -71,6 +72,9 @@
   </div>
 </form>
   </div>
+  <?php
+  print_r($_POST);
+  ?>
   <div class="container pt-4" >
   <table class="table table-striped table">
   <thead>
