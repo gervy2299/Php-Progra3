@@ -8,11 +8,11 @@
    private $bd;
    private $conec;   
    public function __construct(){
-    $this->host="bolxankdjtqq3bz6asqi-mysql.services.clever-cloud.com";
-    $this->usr="uyzmttgmua1trbgc";
-    $this->psw="vlJb7FGntBMPV4zE8mxv";
-    $this->bd="bolxankdjtqq3bz6asqi";
-    $this->port="3306";
+    $this->host="containers-us-west-108.railway.app";
+    $this->usr="root";
+    $this->psw="HkVNr6yKdrGZI74P03Rk";
+    $this->bd="railway";
+    $this->port="7450";
    }
    public function conectar(){
        $this->conec=new mysqli($this->host,$this->usr,$this->psw,$this->bd,$this->port);
