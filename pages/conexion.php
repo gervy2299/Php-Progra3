@@ -83,10 +83,10 @@
            ><i class="fas fa-lock fa-fw me-3"></i><span>Proveedores</span></a
           >
         <a
-           href="#"
+           href="./personas.php"
            class="list-group-item list-group-item-action py-2 ripple"
            ><i class="fas fa-chart-line fa-fw me-3"></i
-          ><span>Información</span></a
+          ><span>Personas</span></a
           >
         <a
            href="stock.php"
