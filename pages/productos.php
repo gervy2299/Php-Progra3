@@ -16,22 +16,25 @@ $accion = (isset($_POST['accion']))?$_POST['accion']:"";
 
 switch ($accion) {
 
-    case 'Modificar':
-        echo 'seleccionando';
-        $sentenciaSQL = "SELECT * FROM productos where idproducto = '".$idprod."';";
+    case 'Insertar':
+        $sentenciaSQL = "select f_ins_productos('".$txtnomProd."',".$txtPrecio.",1,'".$txtCaracte."');";
         if(mysqli_query($obj->conectar(), $sentenciaSQL)){
-            foreach (($obj->conectar()->query($sentenciaSQL)) as $prov) {
-                $txtnomProd = $prov['nomProd'];
-                $txtRuc = $prov['RUC'];
-            }
+                header('location: ./productos.php');
         }
         break;
 
-    case 'Cancelar':
-        $sentenciaSQL = "DELETE FROM productos where idproducto = '".$idprod."';";
+    case 'Modificar':
+        echo 'seleccionando';
+        $sentenciaSQL = "UPDATE productos SET nom_prod = '".$txtnommar."', precio ='".$txtPrecio."', caract = '".$txtCaracte."' WHERE idproducto = '".$idprod."';";
+        echo '<br/><br/><br/><br/> <div style="margin-left: 500px">'.$sentenciaSQL.'</div>';
         if(mysqli_query($obj->conectar(), $sentenciaSQL)){
-            header('location: ./proveedores.php');
+            header('location: ./productos.php');
         }
+        
+        break;
+
+    case 'Cancelar':
+            header('location: ./productos.php');
         break;
 
     case 'Seleccionar':
@@ -49,7 +52,7 @@ switch ($accion) {
             foreach (($obj->conectar()->query($sentenciaSQL)) as $prov) {
                 $txtnomProd = $prov['nomProd'];
                 $txtPrecio = $prov['precio'];
-                //$txtMarca = $prov['marca'];
+                $txtMarca = $prov['marca'];
                 $txtCaracte = $prov['caract'];
                 $cbMarca = $prov['marca'];
             }
@@ -59,7 +62,7 @@ switch ($accion) {
         break;
     
     case 'Borrar':
-        $sentenciaSQL = "DELETE FROM producto where idproducto = '".$idprod."';";
+        $sentenciaSQL = "DELETE FROM productos where idproducto = '".$idprod."';";
         if(mysqli_query($obj->conectar(), $sentenciaSQL)){
             header('location: ./productos.php');
         }
@@ -68,9 +71,9 @@ switch ($accion) {
 
 ?>
 
-<?php
+<!--?php
   $mysqli = new mysqli('containers-us-west-108.railway.app', 'root', 'HkVNr6yKdrGZI74P03Rk', 'railway','7450');
-?>
+?-->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -87,10 +90,10 @@ switch ($accion) {
         <div class="container pt-4">
     <h2 class="text-center">Productos</h2>
     <br>
-            <form action="./iud_proveedores.php" method="post" enctype="multipart/form-data">
+            <form method="post" enctype="multipart/form-data">
                 <!-- <form method="post" enctype="multipart/form-data"> -->
                 <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Precio</label>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">NOMBRE</label>
                     <div class="col-sm-10">
                         <input type="text" value="<?php echo $txtnomProd?>" class="form-control" id="inputEmail3" name="nomProd" placeholder="Ingresar nombre producto...">
                     </div>
