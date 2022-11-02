@@ -26,7 +26,6 @@ switch ($accion) {
 
     case 'Modificar':
         $sentenciaSQL = "UPDATE marcas SET nom_marca = '".$txtnommar."' WHERE idmarca = ".$idmarca.";";
-        echo '<br/><br/><br/><br/> <div style="margin-left: 500px">'.$sentenciaSQL.'</div>';
         if(mysqli_query($obj->conectar(), $sentenciaSQL)){
                 header('location: ./marcas.php');
         }
