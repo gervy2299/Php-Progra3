@@ -8,10 +8,10 @@
    private $bd;
    private $conec;   
    public function __construct(){
-    $this->host="localhost";
-    $this->usr="superusuario";
-    $this->psw="superusuario";
-    $this->bd="pr3_proyecto";
+    $this->host="bolxankdjtqq3bz6asqi-mysql.services.clever-cloud.com";
+    $this->usr="uyzmttgmua1trbgc";
+    $this->psw="vlJb7FGntBMPV4zE8mxv";
+    $this->bd="bolxankdjtqq3bz6asqi";
     $this->port="3306";
    }
    public function conectar(){
