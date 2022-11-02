@@ -111,7 +111,10 @@
                     <td>'.$row["RUC"].'</td>
                     <td>'.$row["empresa"].'</td>
                     <td>'.$row["direccion"].'</td>
-                    <td><i class="fa-solid fa-pen" style="margin-right: 20px;"></i><i class="fa-solid fa-trash"></i></td>
+                    <td>
+                      <a href="#" class="text-warning"><i class="fa-solid fa-pen" style="margin-right: 20px;"></i></a>
+                      <a href="#" class="text-danger"><i class="fa-solid fa-trash"></i></a>
+                    </td>
                 </tr> '; 
     }
     
