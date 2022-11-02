@@ -12,12 +12,32 @@ $txtnommar = (isset($_POST['nom_marca']))?$_POST['nom_marca']:"";
 $accion = (isset($_POST['accion']))?$_POST['accion']:"";
 
 switch ($accion) {
+
+    case 'Cancelar':
+                header('location: ./marcas.php');
+        break;
+
+    case 'Insertar':
+        $sentenciaSQL = "select f_ins_marcas('".$txtnommar."');";
+        if(mysqli_query($obj->conectar(), $sentenciaSQL)){
+                header('location: ./marcas.php');
+        }
+        break;
+
+    case 'Modificar':
+        $sentenciaSQL = "UPDATE marcas SET nom_marca = '".$txtnommar."' WHERE idmarca = ".$idmarca.";";
+        echo '<br/><br/><br/><br/> <div style="margin-left: 500px">'.$sentenciaSQL.'</div>';
+        if(mysqli_query($obj->conectar(), $sentenciaSQL)){
+                header('location: ./marcas.php');
+        }
+        break;
+
     case 'Seleccionar':
-        echo 'seleccionando';
-        $sentenciaSQL = "SELECT * FROM marcas where idmarca = '".$idmarca."';";
+        $sentenciaSQL = "SELECT idmarca, nom_marca FROM marcas where idmarca = ".$idmarca.";";
         if(mysqli_query($obj->conectar(), $sentenciaSQL)){
             foreach (($obj->conectar()->query($sentenciaSQL)) as $mar) {
                 $txtnommar = $mar['nom_marca'];
+                $idmarca = $mar['idmarca'];
             }
         }
         break;
@@ -45,19 +65,20 @@ switch ($accion) {
     <!--Main layout-->
     <main style="margin-top: 7vh">
         <div class="container pt-4">
-            <form action="./iud_marcas.php" method="post" enctype="multipart/form-data">
+            <form method="post" enctype="multipart/form-data">
                 <!-- <form method="post" enctype="multipart/form-data"> -->
+                        <input type="hidden" value="<?php echo $idmarca; ?>" class="form-control" id="inputEmail3" name="idmarca" placeholder="Ingresar nombre de marca...">
                 <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">MARCAS</label>
                     <div class="col-sm-10">
-                        <input type="number" value="<?php echo $txtnommar?>" class="form-control" id="inputEmail3" name="marca" placeholder="Ingresar nombre de marca...">
+                        <input type="text" value="<?php echo $txtnommar; ?>" class="form-control" id="inputEmail3" name="nom_marca" placeholder="Ingresar nombre de marca...">
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-10 text-center">
-                        <button type="submit" <?php if($accion=='Seleccionar'){echo 'disabled';}?> class="btn btn-primary">Insertar</button>
-                        <button type="submit" <?php if($accion!='Seleccionar'){echo 'disabled';}?> class="btn btn-warning">Modificar</button>
-                        <button type="submit" <?php if($accion!='Seleccionar'){echo 'disabled';}?> class="btn btn-secondary">Cancelar</button>
+                        <button type="submit" <?php if($accion=='Seleccionar'){echo 'disabled';}?> name="accion" value="Insertar" class="btn btn-primary">Insertar</button>
+                        <button type="submit" <?php if($accion!='Seleccionar'){echo 'disabled';}?> name="accion" value="Modificar" class="btn btn-warning">Modificar</button>
+                        <button type="submit" <?php if($accion!='Seleccionar'){echo 'disabled';}?> name="accion" value="Cancelar" class="btn btn-secondary">Cancelar</button>
                     </div>
                 </div>
             </form>
