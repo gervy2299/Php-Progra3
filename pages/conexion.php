@@ -118,14 +118,9 @@
           ><span></span></a
           >
         <a
-           href="#"
+           href="./informacion.php"
            class="list-group-item list-group-item-action py-2 ripple"
-           ><i class="fas fa-users fa-fw me-3"></i><span></span></a
-          >
-        <a
-           href="#"
-           class="list-group-item list-group-item-action py-2 ripple"
-           ><i class="fas fa-money-bill fa-fw me-3"></i><span></span></a
+           ><i class="fas fa-users fa-fw me-3"></i><span>Información</span></a
           >
       </div>
     </div>
