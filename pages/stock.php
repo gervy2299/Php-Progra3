@@ -53,15 +53,18 @@
     <tr>
       <th scope="col">N°</th>
       <th scope="col">PRODUCTO</th>
+      <th scope="col">CARACTERISTICA</th>
+      <th scope="col">CANTIDAD</th>
       <th scope="col">PRECIO</th>
       <th scope="col">MARCA</th>
-      <th scope="col">CARACTERISTICA</th>
+      <th scope="col">PROVEEDOR</th>
       <th scope="col">ACCIONES</th>
     </tr>
   </thead>
   <tbody>
     <?php 
-    $sql= 'select p.nom_prod,p.precio,m.nom_marca,p.caract from productos p inner join marcas m on p.idmarca=m.idmarca order by p.nom_prod;';
+    $sql= 'select pr.nom_prod,pr.caract,s.cantidad,pr.precio,m.nom_marca,em.raz_social  from  stock s INNER JOIN productos pr ON s.idproducto = pr.idproducto INNER JOIN marcas m ON pr.idmarca=m.idmarca INNER JOIN proveedor p ON s.idproveedor=p.idproveedor INNER JOIN empresa em ON em.RUC=p.RUC WHERE pr.nom_prod LIKE "%%"  ORDER by pr.nom_prod ;
+    ';
     $item=0;
             
     foreach ($obj->conectar()->query($sql) as $row) {
@@ -70,9 +73,11 @@
                 <tr>
                     <th scope="row">'.$item.'</th>
                     <td>'.$row["nom_prod"].'</td>
+                    <td>'.$row["caract"].'</td>
+                    <td>'.$row["cantidad"].'</td>
                     <td>'.$row["precio"].'</td>
                     <td>'.$row["nom_marca"].'</td>
-                    <td>'.$row["caract"].'</td>
+                    <td>'.$row["raz_social"].'</td>
                     <td><i class="fa-solid fa-pen" style="margin-right: 20px;"></i><i class="fa-solid fa-trash"></i></td>
                 </tr> '; 
     }

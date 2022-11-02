@@ -8,10 +8,10 @@
    private $bd;
    private $conec;   
    public function __construct(){
-    $this->host="localhost";
-    $this->usr="superusuario";
-    $this->psw="superusuario";
-    $this->bd="pr3_proyecto";
+    $this->host="bolxankdjtqq3bz6asqi-mysql.services.clever-cloud.com";
+    $this->usr="uyzmttgmua1trbgc";
+    $this->psw="vlJb7FGntBMPV4zE8mxv";
+    $this->bd="bolxankdjtqq3bz6asqi";
     $this->port="3306";
    }
    public function conectar(){
@@ -89,10 +89,10 @@
           ><span>Información</span></a
           >
         <a
-           href="#"
+           href="stock.php"
            class="list-group-item list-group-item-action py-2 ripple"
            >
-          <i class="fas fa-chart-pie fa-fw me-3"></i><span>SEO</span>
+          <i class="fas fa-chart-pie fa-fw me-3"></i><span>Stock</span>
         </a>
         <a
            href="#"
