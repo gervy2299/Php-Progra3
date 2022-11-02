@@ -73,7 +73,7 @@ switch ($accion) {
                 </thead>
                 <tbody>
                     <?php
-                    $sql = 'select nom_marca from marcas where nom_marca like "%%" order by nom_marca;';
+                    $sql = 'select idmarca,nom_marca from marcas where nom_marca like "%%" order by nom_marca;';
                     $item = 0;
 
                     foreach ($obj->conectar()->query($sql) as $row) {
@@ -84,7 +84,7 @@ switch ($accion) {
                             <td><?php echo $row["nom_marca"] ?></td>
                             <td>
                                 <form method="post">
-                                    <input type='hidden' name="idmarca" value="<?php echo $row['idmarca']?>">
+                                    <input type='hidden' name="idmarca" value="<?php echo $row['idmarca'];?>">
                                     <input type='submit' class="btn btn-warning" name="accion" value="Seleccionar"></input>
                                     <input type='submit' class="btn btn-danger" name="accion" value="Borrar"></input>
                                 </form>
