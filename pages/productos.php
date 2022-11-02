@@ -9,7 +9,7 @@ if ($_SESSION['usuario'] == null || $_SESSION['usuario'] == '') {
 $idprod = (isset($_POST['idprod']))?$_POST['idprod']:"";
 $txtnomProd = (isset($_POST['nomProd']))?$_POST['nomProd']:"";
 $txtPrecio = (isset($_POST['precio']))?$_POST['precio']:"";
-//$txtMarca = (isset($_POST['marca']))?$_POST['marca']:"";
+$txtMarca = (isset($_POST['marca']))?$_POST['marca']:"";
 $txtCaracte = (isset($_POST['caract']))?$_POST['caract']:"";
 
 $accion = (isset($_POST['accion']))?$_POST['accion']:"";
@@ -104,17 +104,17 @@ switch ($accion) {
                 <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">MARCA</label>
                     <div class="col-sm-10">
-                    <select class="form-group" name="marca">
+                    <!-- <select class="form-group" name="marca">
                     <option value="0"><?php echo $cbMarca; ?></option>
-                      <?php
+                      <?php/*
                         $query = $mysqli -> query ("SELECT * FROM marcas");
                         while ($valores = mysqli_fetch_array($query)) {
                           echo '<option value="'.$valores['idmarca'].'">'.$valores['nom_marca'].'</option>';
-                        }
+                        }*/
                       ?>
-                      <!-- <option value="/<?//php echo $cbMarca; ?>" selected></option> -->
-                    </select>
-                    <!-- <input type="text" value="<?php echo $txtMarca?>" class="form-control" id="inputEmail3" name="marca" placeholder="Ingresar marca del producto..."> -->
+                      <option value="/<?//php echo $cbMarca; ?>" selected></option>
+                    </select> -->
+                     <input type="text" value="<?php echo $txtMarca?>" class="form-control" id="inputEmail3" name="marca" placeholder="Ingresar marca del producto...">
                     </div>
                 </div>
                 <div class="form-group row">
