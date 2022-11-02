@@ -100,22 +100,22 @@
            ><i class="fas fa-chart-bar fa-fw me-3"></i><span>Marcas</span></a
           >
         <a
-           href="#"
+           href="./reportes.php"
            class="list-group-item list-group-item-action py-2 ripple"
            ><i class="fas fa-globe fa-fw me-3"></i
-          ><span></span></a
+          ><span>Reportes</span></a
           >
         <a
-           href="#"
+           href="./ventas.php"
            class="list-group-item list-group-item-action py-2 ripple"
            ><i class="fas fa-building fa-fw me-3"></i
-          ><span></span></a
+          ><span>Ventas</span></a
           >
         <a
-           href="#"
+           href="./newVenta.php"
            class="list-group-item list-group-item-action py-2 ripple"
            ><i class="fas fa-calendar fa-fw me-3"></i
-          ><span></span></a
+          ><span>Nueva Venta</span></a
           >
         <a
            href="./informacion.php"

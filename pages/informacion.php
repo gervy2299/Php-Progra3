@@ -63,27 +63,27 @@ $sentenciaSQL = "SELECT
                                 <div class="col-md-12">
                                     <div class="media">
                                         <label>DNI:</label>
-                                        <hr>
+                                        <!-- <hr> -->
                                         <p><?php echo $dni;?></p>
                                     </div>
                                     <div class="media">
                                         <label>NOMBRES:</label>
-                                        <hr>
+                                        <!-- <hr> -->
                                         <p><?php echo $nomper;?></p>
                                     </div>
                                     <div class="media">
                                         <label>APELLIDO PATERNO:</label>
-                                        <hr>
+                                        <!-- <hr> -->
                                         <p><?php echo $papellido;?></p>
                                     </div>
                                     <div class="media">
                                         <label>APELLIDO MATERNO:</label>
-                                        <hr>
+                                        <!-- <hr> -->
                                         <p><?php echo $sapellido;?></p>
                                     </div>
                                     <div class="media">
                                         <label>AREA ASIGNADA:</label>
-                                        <hr>
+                                        <!-- <hr> -->
                                         <p><?php echo $area;?></p>
                                     </div>
                                 </div>

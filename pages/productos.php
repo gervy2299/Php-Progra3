@@ -78,6 +78,8 @@ switch ($accion) {
     <!--Main layout-->
     <main style="margin-top: 7vh">
         <div class="container pt-4">
+    <h2 class="text-center">Productos</h2>
+    <br>
             <form action="./iud_proveedores.php" method="post" enctype="multipart/form-data">
                 <!-- <form method="post" enctype="multipart/form-data"> -->
                 <div class="form-group row">
@@ -114,7 +116,7 @@ switch ($accion) {
                 </div>
             </form>
         </div>
-        <div class="container pt-4">
+        <div class="container pt-4 ">
             <table class="table table-striped table">
                 <thead>
                     <tr>

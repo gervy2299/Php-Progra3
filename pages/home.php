@@ -27,6 +27,8 @@
 <!--Main layout-->
 <main style="margin-top: 7vh">
   <div class="container pt-4">
+    <h2 class="text-center">Empleados</h2>
+    <br>
   <form>
   <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label">DNI</label>
@@ -55,8 +57,10 @@
 
 
   <div class="form-group row">
-    <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Agregar</button>
+    <div class="col-sm-10 text-center">
+      <button type="submit" name="accion" value="Insertar" class="btn btn-primary">Insertar</button>
+      <button type="submit" name="accion" value="Modificar" class="btn btn-warning">Modificar</button>
+      <button type="submit" name="accion" value="Cancelar" class="btn btn-secondary">Cancelar</button>
     </div>
   </div>
 </form>
@@ -77,6 +81,7 @@
   <tbody>
     <?php 
     $sql= 'SELECT
+                e.idempleado as idempleado,
                 concat(p.nom_persona," ", p.primer_apellido," ",p.segundo_apellido) as empleado,
                 e.DNI as DNI,
                 a.area as area
@@ -87,14 +92,22 @@
             
     foreach ($obj->conectar()->query($sql) as $row) {
         $item++;
-        echo '
+        
+        ?>
                 <tr>
-                    <th scope="row">'.$item.'</th>
-                    <td>'.$row["empleado"].'</td>
-                    <td>'.$row["DNI"].'</td>
-                    <td>'.$row["area"].'</td>
-                    <td><i class="fa-solid fa-pen" style="margin-right: 20px;"></i><i class="fa-solid fa-trash"></i></td>
-                </tr> '; 
+                    <th scope="row"><?php echo $item; ?></th>
+                    <td><?php echo $row["empleado"]?></td>
+                    <td><?php echo $row["DNI"] ?></td>
+                    <td><?php echo $row["area"] ?></td>
+                    <td>
+                      <form method="post">
+                        <input type='hidden' name="idmarca" value="<?php echo $row['idempleado'];?>">
+                        <input type='submit' class="btn btn-warning" name="accion" value="Seleccionar"></input>
+                        <input type='submit' class="btn btn-danger" name="accion" value="Borrar"></input>
+                      </form>
+                    </td>
+                </tr> 
+                <?php 
     }
     
     ?>    

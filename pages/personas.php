@@ -63,6 +63,8 @@ switch ($accion) {
     <!--Main layout-->
     <main style="margin-top: 7vh">
         <div class="container pt-4">
+    <h2 class="text-center">Personas</h2>
+    <br>
             <form method="post" enctype="multipart/form-data">
                 <!-- <form method="post" enctype="multipart/form-data"> -->
                 <div class="form-group row">

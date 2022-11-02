@@ -65,6 +65,8 @@ switch ($accion) {
     <!--Main layout-->
     <main style="margin-top: 7vh">
         <div class="container pt-4">
+    <h2 class="text-center">Marcas</h2>
+    <br>
             <form method="post" enctype="multipart/form-data">
                 <!-- <form method="post" enctype="multipart/form-data"> -->
                         <input type="hidden" value="<?php echo $idmarca; ?>" class="form-control" id="inputEmail3" name="idmarca" placeholder="Ingresar nombre de marca...">
