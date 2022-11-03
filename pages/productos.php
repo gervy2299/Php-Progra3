@@ -17,16 +17,16 @@ $accion = (isset($_POST['accion']))?$_POST['accion']:"";
 switch ($accion) {
 
     case 'Insertar':
-        $sentenciaSQL = "select f_ins_productos('".$txtnomProd."',".$txtPrecio.",1,'".$txtCaracte."');";
+        $sentenciaSQL = "select f_ins_productos('$txtnomProd',$txtPrecio, '$txtMarca', '$txtCaracte');";
         if(mysqli_query($obj->conectar(), $sentenciaSQL)){
-                header('location: ./productos.php');
+            header('location: ./productos.php');
         }
         break;
 
     case 'Modificar':
         echo 'seleccionando';
-        $sentenciaSQL = "UPDATE productos SET nom_prod = '".$txtnommar."', precio ='".$txtPrecio."', caract = '".$txtCaracte."' WHERE idproducto = '".$idprod."';";
-        echo '<br/><br/><br/><br/> <div style="margin-left: 500px">'.$sentenciaSQL.'</div>';
+        $sentenciaSQL = "select f_upt_producto('".$idprod."', '".$txtnomProd."', '".$txtCaracte."',".$txtPrecio.", '".$txtMarca."');";
+        //echo '<br/><br/><br/><br/> <div style="margin-left: 500px">'.$sentenciaSQL.'</div>';
         if(mysqli_query($obj->conectar(), $sentenciaSQL)){
             header('location: ./productos.php');
         }
